@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, View } from 'react-native'
 
 class HomeScreen extends React.Component {
   constructor (props) {
@@ -12,7 +12,9 @@ class HomeScreen extends React.Component {
 
   render () {
     return (
-      <Text>Welcome to the Home Screen !</Text>
+      <View style={{ flex: 1, justifyContent: 'center' }}>
+        <Text style={{ textAlign: 'center' }}>Welcome to the Home Screen !</Text>
+      </View>
     )
   }
 }
