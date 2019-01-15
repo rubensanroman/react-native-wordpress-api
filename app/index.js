@@ -1,7 +1,7 @@
 import React from 'react'
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation'
+import { createAppContainer, createBottomTabNavigator } from 'react-navigation'
 import NavigatorConfig from './config/Navigator'
 
-const TabNavigator = createBottomTabNavigator(NavigatorConfig)
+const Navigator = createBottomTabNavigator(NavigatorConfig)
 
-export default createAppContainer(TabNavigator)
+export default createAppContainer(Navigator)
