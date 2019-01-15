@@ -1,8 +1,8 @@
 import React from 'react'
 import ApiConfig from '../config/Api'
 
-const ApiGetOneByIdHelper = (itemPath, itemId, successCallback, errorCallback) => {
-  return fetch(ApiConfig.URL + ApiConfig.BASE_PATH + itemPath + '/' + itemId)
+const ApiGetOneByIdHelper = (itemsPath, itemId, successCallback, errorCallback) => {
+  return fetch(ApiConfig.URL + ApiConfig.BASE_PATH + itemsPath + '/' + itemId)
     .then((response) => response.json())
     .then(successCallback)
     .catch(errorCallback)
