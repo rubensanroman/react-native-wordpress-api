@@ -9,19 +9,19 @@ const TabNavigator = createBottomTabNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: {
-      tabBarIcon: () => <Ionicons name='md-home' size={32} color='black' />
+      tabBarIcon: ({ tintColor }) => <Ionicons name='md-home' size={32} color={tintColor} />
     }
   },
   About: {
     screen: AboutScreen,
     navigationOptions: {
-      tabBarIcon: () => <Ionicons name='md-contact' size={32} color='black' />
+      tabBarIcon: ({ tintColor }) => <Ionicons name='md-contact' size={32} color={tintColor} />
     }
   },
   Contact: {
     screen: ContactScreen,
     navigationOptions: {
-      tabBarIcon: () => <Ionicons name='md-mail' size={32} color='black' />
+      tabBarIcon: ({ tintColor }) => <Ionicons name='md-mail' size={32} color={tintColor} />
     }
   }
 })
