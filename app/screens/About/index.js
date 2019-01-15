@@ -15,11 +15,11 @@ class AboutScreen extends React.Component {
   render () {
     return (this.state.isLoading) ? (
       <View style={{ flex: 1, justifyContent: 'center' }}>
-        <Text style={{ textAlign: 'center' }}>Loadings ...</Text>
+        <Text style={{ textAlign: 'center' }}>Loading ...</Text>
       </View>
     ) : (
       <View style={{ flex: 1, justifyContent: 'center' }}>
-        <Text style={{ textAlign: 'center' }}>{ JSON.stringify(this.state.data) }</Text>
+        <Text style={{ textAlign: 'center' }}>Welcome to the About Screen !</Text>
       </View>
     )
   }
