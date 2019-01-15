@@ -8,21 +8,8 @@ class AboutScreen extends React.Component {
     super(props)
 
     this.state = {
-      data: [],
-      isLoading: true
+      data: []
     }
-  }
-
-  componentDidMount () {
-    PostService.getOneById(1, this.dataDidLoad, this.dataDiderror)
-  }
-
-  dataDidLoad = (data) => {
-    this.setState({ data, isLoading: false })
-  }
-
-  dataDidError = () => {
-    this.setState({ data: <ErrorComponent />, isLoading: false })
   }
 
   render () {
