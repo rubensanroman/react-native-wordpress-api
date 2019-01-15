@@ -14,11 +14,10 @@ class AboutScreen extends React.Component {
   }
 
   componentDidMount () {
-    PostService.getAll(this.dataDidLoad, this.dataDidLerror)
+    PostService.getAll(this.dataDidLoad, this.dataDiderror)
   }
 
   dataDidLoad = (data) => {
-    console.log(data);
     this.setState({ data, isLoading: false })
   }
 
