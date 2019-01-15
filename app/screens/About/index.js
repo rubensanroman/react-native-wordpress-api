@@ -14,7 +14,7 @@ class AboutScreen extends React.Component {
   }
 
   componentDidMount () {
-    PostService.getAll(this.dataDidLoad, this.dataDiderror)
+    PostService.getOneById(1, this.dataDidLoad, this.dataDiderror)
   }
 
   dataDidLoad = (data) => {
