@@ -1,22 +1,4 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import HomeScreen from './screens/Home'
 
-class HomeScreen extends React.Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      data: []
-    }
-  }
-
-  render () {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center' }}>
-        <Text style={{ textAlign: 'center' }}>Welcome to the Home Screen !</Text>
-      </View>
-    )
-  }
-}
-
-export default HomeScreen
+export default () => <HomeScreen />
