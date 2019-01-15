@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import PostService from '../../services/Post'
-import ErrorScreen from '../Error'
+import ErrorComponent from '../../components/Error'
 
 class AboutScreen extends React.Component {
   constructor (props) {
@@ -22,7 +22,7 @@ class AboutScreen extends React.Component {
   }
 
   dataDidError = () => {
-    this.setState({ data: <ErrorScreen />, isLoading: false })
+    this.setState({ data: <ErrorComponent />, isLoading: false })
   }
 
   render () {
