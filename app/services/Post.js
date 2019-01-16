@@ -1,11 +1,11 @@
 import ApiConfig from '../config/Api'
-import ApiGetCollectionHelper from '../helpers/ApiGetCollection'
+import ApiGetAllHelper from '../helpers/ApiGetAll'
 import ApiGetOneByIdHelper from '../helpers/ApiGetOneById'
 import ApiCreateHelper from '../helpers/ApiCreate'
 
 const PostService = {
   getAll: function (successCallbackFunc, errorCallbackFunc) {
-    return ApiGetCollectionHelper(ApiConfig.POSTS_PATH, successCallbackFunc, errorCallbackFunc)
+    return ApiGetAllHelper(ApiConfig.POSTS_PATH, successCallbackFunc, errorCallbackFunc)
   },
 
   getOneById: function (postId, successCallbackFunc, errorCallbackFunc) {
