@@ -3,7 +3,7 @@ import WpCredentialsConfig from '../config/WpCredentials'
 import ApiGetAuthTokenHelper from '../helpers/ApiGetAuthToken'
 
 const ApiAuthService = {
-  handshake: function () {
+  getAuthToken: function () {
     ApiGetAuthTokenHelper(WpCredentialsConfig.admin, this.callbackSuccessFunc, this.callbackErrorFunc)
   },
 
