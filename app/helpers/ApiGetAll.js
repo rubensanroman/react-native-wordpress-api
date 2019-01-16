@@ -1,9 +1,9 @@
 import React from 'react'
+import axios from 'axios'
 import ApiConfig from '../config/Api'
 
 const ApiGetAllHelper = (itemsPath, successCallback, errorCallback) => {
-  return fetch(ApiConfig.URL + ApiConfig.BASE_PATH + itemsPath)
-    .then((response) => response.json())
+  return axios.get(ApiConfig.URL + ApiConfig.BASE_PATH + itemsPath)
     .then(successCallback)
     .catch(errorCallback)
 }
