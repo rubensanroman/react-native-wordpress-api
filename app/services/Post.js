@@ -12,8 +12,8 @@ const PostService = {
     return ApiGetOneByIdHelper(ApiConfig.POSTS_PATH, postId, successCallbackFunc, errorCallbackFunc)
   },
 
-  createOne: function (postBody, successCallbackFunc, errorCallbackFunc) {
-    return ApiCreateOneHelper(ApiConfig.POSTS_PATH, postBody, successCallbackFunc, errorCallbackFunc)
+  createOne: function (postData, successCallbackFunc, errorCallbackFunc) {
+    return ApiCreateOneHelper(ApiConfig.POSTS_PATH, postData, successCallbackFunc, errorCallbackFunc)
   }
 }
 
