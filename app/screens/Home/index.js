@@ -3,6 +3,7 @@ import { Button, FlatList, Text, View } from 'react-native'
 import PostService from '../../services/Post'
 import ContainerComponent from '../../components/Container'
 import PreloaderComponent from '../../components/Preloader'
+import PostListItemComponent from '../../components/PostListItem'
 
 class HomeScreen extends React.Component {
   constructor (props) {
@@ -41,12 +42,7 @@ class HomeScreen extends React.Component {
           <FlatList
             data={ this.state.data }
             keyExtractor={(item, index) => index.toString()}
-            renderItem={({item}) =>
-              <View>
-                <Text>{item.title.rendered}</Text>
-                <Text>{item.content.rendered}</Text>
-              </View>
-            }
+            renderItem={({item}) => <PostListItemComponent item={item} />}
             />
         }
       </ContainerComponent>
