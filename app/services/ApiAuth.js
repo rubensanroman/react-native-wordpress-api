@@ -1,4 +1,5 @@
 import React from 'react'
+import { AsyncStorage } from 'react-native'
 import WpCredentialsConfig from '../config/WpCredentials'
 import ApiGetAuthTokenHelper from '../helpers/ApiGetAuthToken'
 
@@ -8,9 +9,7 @@ const ApiAuthService = {
   },
 
   callbackSuccessFunc: function (response) {
-    if (response.token !== undefined) {
-      WpCredentialsConfig.authToken = response.token
-    }
+    AsyncStorage.setItem('authToken', response.data.token)
   },
 
   callbackErrorFunc: function (error) {
