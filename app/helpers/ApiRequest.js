@@ -11,9 +11,10 @@ const ApiRequestHelper = (url, method, data, token, successCallbackFunc, errorCa
     config.data = data
     config.headers = {
       'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + token
+      'Content-Type': 'application/json'
     }
+
+    if (token !== '') config.headers['Authorization'] = 'Bearer ' + token
   }
 
   return axios(config)
