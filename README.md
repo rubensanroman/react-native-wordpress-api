@@ -1,10 +1,10 @@
 ![React Native Wordpress Api](assets/github/logo.png)
 ## React Native + Wordpress Rest API
 
-My selected folder structure for a React Native (@expo) project based on some research about good practices mixed with personal preferences.
+A simple and reusable React Native (@expo) project that connects with a Wordpress Rest API and authenticates using JWT protocol. The folder structure is based on some research about good practices mixed with personal preferences.
 
 ## Getting Started
-You need to have expo installed in your device for testing purposes
+Just follow the typical installing & starting commands.
 ```
 npm install
 npm start
@@ -12,14 +12,6 @@ npm start
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+You need a remote online installation of Wordpress with an enabled Rest API.
 
 ### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
