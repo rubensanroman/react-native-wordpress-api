@@ -1,10 +1,14 @@
 ![React Native Wordpress Api](assets/github/logo.png)
+## React Native + Wordpress Rest API
 
-One Paragraph of project description goes here
+My selected folder structure for a React Native (@expo) project based on some research about good practices mixed with personal preferences.
 
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+You need to have expo installed in your device for testing purposes
+```
+npm install
+npm start
+```
 
 ### Prerequisites
 
