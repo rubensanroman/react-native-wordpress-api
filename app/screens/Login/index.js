@@ -39,7 +39,7 @@ class LoginScreen extends React.Component {
   }
 
   tokenDidError = (error) => {
-    console.error(error)
+    console.error(error.response.data.code.split(' ')[1])
   }
 
   render () {
