@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-worpdress",
-    "slug": "react-native-worpdress",
+    "name": "react-native-worpdress-api",
+    "slug": "react-native-worpdress-api",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
