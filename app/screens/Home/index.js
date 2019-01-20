@@ -4,6 +4,7 @@ import PostService from '../../services/Post'
 import ContainerComponent from '../../components/Container'
 import PreloaderComponent from '../../components/Preloader'
 import PostListItemComponent from '../../components/PostListItem'
+import AddItemButtonComponent from '../../components/AddItemButton'
 
 class HomeScreen extends React.Component {
   constructor (props) {
@@ -35,6 +36,10 @@ class HomeScreen extends React.Component {
     this.setState({ isLoading: false })
   }
 
+  addItem = () => {
+    console.log('Add Item!')
+  }
+
   render () {
     return (this.state.isLoading) ? ( <ContainerComponent children={ <PreloaderComponent /> } /> ) : (
       <ContainerComponent>
@@ -45,6 +50,7 @@ class HomeScreen extends React.Component {
             renderItem={({item}) => <PostListItemComponent item={item} />}
             />
         }
+        <AddItemButtonComponent onPressHandlerFunc={this.addItem} />
       </ContainerComponent>
     )
   }

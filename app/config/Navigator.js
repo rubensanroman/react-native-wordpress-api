@@ -15,7 +15,7 @@ module.exports = {
   HOME: {
     screen: HomeScreen,
     navigationOptions: {
-      tabBarIcon: ({ tintColor }) => <Ionicons name='md-home' size={32} color={tintColor} />
+      tabBarVisible: false
     }
   },
   ABOUT: {
