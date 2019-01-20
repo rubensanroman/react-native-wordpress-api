@@ -7,4 +7,3 @@ npm-debug.*
 *.mobileprovision
 *-lock.json
 *.lock
-app/config/Api.js
