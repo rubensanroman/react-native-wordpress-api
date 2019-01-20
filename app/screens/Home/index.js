@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, FlatList, Text, View } from 'react-native'
+import { withNavigation } from 'react-navigation'
 import PostService from '../../services/Post'
 import ContainerComponent from '../../components/Container'
 import PreloaderComponent from '../../components/Preloader'
@@ -37,7 +38,7 @@ class HomeScreen extends React.Component {
   }
 
   addItem = () => {
-    console.log('Add Item!')
+    this.props.navigation.navigate('CAMERA')
   }
 
   render () {

@@ -1,9 +1,7 @@
 import React from 'react'
-import { Ionicons } from '@expo/vector-icons'
-import HomeScreen from '../screens/Home'
-import AboutScreen from '../screens/About'
-import ContactScreen from '../screens/Contact'
 import LoginScreen from '../screens/Login'
+import HomeScreen from '../screens/Home'
+import CameraScreen from '../screens/Camera'
 
 module.exports = {
   LOGIN: {
@@ -18,16 +16,10 @@ module.exports = {
       tabBarVisible: false
     }
   },
-  ABOUT: {
-    screen: AboutScreen,
+  CAMERA: {
+    screen: CameraScreen,
     navigationOptions: {
-      tabBarIcon: ({ tintColor }) => <Ionicons name='md-contact' size={32} color={tintColor} />
-    }
-  },
-  CONTACT: {
-    screen: ContactScreen,
-    navigationOptions: {
-      tabBarIcon: ({ tintColor }) => <Ionicons name='md-mail' size={32} color={tintColor} />
+      tabBarVisible: false
     }
   }
 }
