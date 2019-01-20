@@ -29,12 +29,12 @@ class LoginScreen extends React.Component {
   }
 
   tokenDidSave = (response) => {
-    const Cmp = this
+    const thisComp = this
 
     AsyncStorage.setItem('authToken', response.data.token, function (val) {
-      Cmp.setState({ isLoading: false })
+      thisComp.setState({ isLoading: false })
 
-      Cmp.props.navigation.navigate('HOME')
+      thisComp.props.navigation.navigate('HOME')
     })
   }
 
