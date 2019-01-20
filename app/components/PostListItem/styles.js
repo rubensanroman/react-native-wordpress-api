@@ -2,7 +2,8 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   item: {
-    backgroundColor: '#ff0',
+    borderBottomWidth: 1,
+    borderColor: '#333',
     marginBottom: 10,
     marginLeft: 10,
     marginRight: 10,
