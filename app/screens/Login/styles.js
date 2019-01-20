@@ -49,6 +49,8 @@ export default StyleSheet.create({
 
   buttonText: {
     color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
     textAlign: 'center'
   },
 
