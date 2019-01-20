@@ -3,8 +3,15 @@ import { Ionicons } from '@expo/vector-icons'
 import HomeScreen from '../screens/Home'
 import AboutScreen from '../screens/About'
 import ContactScreen from '../screens/Contact'
+import LoginScreen from '../screens/Login'
 
 module.exports = {
+  LOGIN: {
+    screen: LoginScreen,
+    navigationOptions: {
+      tabBarVisible: false
+    }
+  },
   HOME: {
     screen: HomeScreen,
     navigationOptions: {
