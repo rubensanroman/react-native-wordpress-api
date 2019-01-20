@@ -5,15 +5,15 @@ import ApiCreateOneHelper from '../helpers/ApiCreateOne'
 
 const PageService = {
   getAll: function (successCallbackFunc, errorCallbackFunc) {
-    return ApiGetAllHelper(ApiConfig.PAGES_PATH, successCallbackFunc, errorCallbackFunc)
+    return ApiGetAllHelper(ApiConfig.ENDPOINTS.PAGES, successCallbackFunc, errorCallbackFunc)
   },
 
   getOneById: function (pageId, successCallbackFunc, errorCallbackFunc) {
-    return ApiGetOneByIdHelper(ApiConfig.PAGES_PATH, pageId, successCallbackFunc, errorCallbackFunc)
+    return ApiGetOneByIdHelper(ApiConfig.ENDPOINTS.PAGES, pageId, successCallbackFunc, errorCallbackFunc)
   },
 
   createOne: function (pageData, successCallbackFunc, errorCallbackFunc) {
-    return ApiCreateOneHelper(ApiConfig.PAGES_PATH, pageData, successCallbackFunc, errorCallbackFunc)
+    return ApiCreateOneHelper(ApiConfig.ENDPOINTS.PAGES, pageData, successCallbackFunc, errorCallbackFunc)
   }
 }
 

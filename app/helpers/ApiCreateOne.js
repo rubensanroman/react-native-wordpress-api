@@ -5,7 +5,7 @@ import ApiRequestHelper from './ApiRequest'
 
 const ApiCreateOneHelper = (itemsPath, itemData, successCallbackFunc, errorCallbackFunc) => {
   return AsyncStorage.getItem('authToken').then(authToken => {
-    ApiRequestHelper(ApiConfig.URL + ApiConfig.BASE_PATH + itemsPath, 'post', itemData, authToken, successCallbackFunc, errorCallbackFunc)
+    ApiRequestHelper(ApiConfig.URL + ApiConfig.ENDPOINTS.BASE + itemsPath, 'post', itemData, authToken, successCallbackFunc, errorCallbackFunc)
   })
 }
 

@@ -5,15 +5,15 @@ import ApiCreateOneHelper from '../helpers/ApiCreateOne'
 
 const PostService = {
   getAll: function (successCallbackFunc, errorCallbackFunc) {
-    return ApiGetAllHelper(ApiConfig.POSTS_PATH, successCallbackFunc, errorCallbackFunc)
+    return ApiGetAllHelper(ApiConfig.ENDPOINTS.POSTS, successCallbackFunc, errorCallbackFunc)
   },
 
   getOneById: function (postId, successCallbackFunc, errorCallbackFunc) {
-    return ApiGetOneByIdHelper(ApiConfig.POSTS_PATH, postId, successCallbackFunc, errorCallbackFunc)
+    return ApiGetOneByIdHelper(ApiConfig.ENDPOINTS.POSTS, postId, successCallbackFunc, errorCallbackFunc)
   },
 
   createOne: function (postData, successCallbackFunc, errorCallbackFunc) {
-    return ApiCreateOneHelper(ApiConfig.POSTS_PATH, postData, successCallbackFunc, errorCallbackFunc)
+    return ApiCreateOneHelper(ApiConfig.ENDPOINTS.POSTS, postData, successCallbackFunc, errorCallbackFunc)
   }
 }
 

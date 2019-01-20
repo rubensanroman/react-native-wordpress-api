@@ -5,15 +5,15 @@ import ApiCreateOneHelper from '../helpers/ApiCreateOne'
 
 const UserService = {
   getAll: function (successCallbackFunc, errorCallbackFunc) {
-    return ApiGetAllHelper(ApiConfig.USERS_PATH, successCallbackFunc, errorCallbackFunc)
+    return ApiGetAllHelper(ApiConfig.ENDPOINTS.USERS, successCallbackFunc, errorCallbackFunc)
   },
 
   getOneById: function (userId, successCallbackFunc, errorCallbackFunc) {
-    return ApiGetOneByIdHelper(ApiConfig.USERS_PATH, userId, successCallbackFunc, errorCallbackFunc)
+    return ApiGetOneByIdHelper(ApiConfig.ENDPOINTS.USERS, userId, successCallbackFunc, errorCallbackFunc)
   },
 
   createOne: function (userData, successCallbackFunc, errorCallbackFunc) {
-    return ApiCreateOneHelper(ApiConfig.USERS_PATH, userData, successCallbackFunc, errorCallbackFunc)
+    return ApiCreateOneHelper(ApiConfig.ENDPOINTS.USERS, userData, successCallbackFunc, errorCallbackFunc)
   }
 }
 
