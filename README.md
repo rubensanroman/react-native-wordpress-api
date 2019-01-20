@@ -5,7 +5,7 @@ A simple and reusable React Native (@expo) project that connects with a Wordpres
 
 ## JWT Authentication
 
-I built a simple login form that asks the api for a JWT token and then save it in the device local storage.
+I built a simple login form that asks the api for a JWT token which then will be stored in the device local storage.
 
 ![iOs and Android screens](assets/github/screens1.png)
 
@@ -20,4 +20,4 @@ npm start
 
 You need a remote online installation of Wordpress with an enabled Rest API.
 
-### Installing
+### Setup
