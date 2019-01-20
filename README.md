@@ -3,6 +3,8 @@
 
 A simple and reusable React Native (@expo) project that connects with a Wordpress Rest API and authenticates using JWT protocol. The folder structure is based on some research about good practices mixed with personal preferences.
 
+![iOs and Android screens](assets/github/screens1.png)
+
 ## Getting Started
 Just follow the typical installing & starting commands.
 ```
