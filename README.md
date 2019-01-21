@@ -9,6 +9,19 @@ I built a simple login form that asks the api for a JWT token which then will be
 
 ![iOs and Android screens](assets/github/screens1.png)
 
+## Posts Fetching
+It retrieves the full posts array from the API and displays them as FlatList
+
+```
+Images coming soon ...
+```
+## Selfie Take & Upload
+It opens the front camera and take a picture for future uploading
+
+```
+Images coming soon ...
+```
+
 ## Getting Started
 Just follow the typical installing & starting commands.
 ```
