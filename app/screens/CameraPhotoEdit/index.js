@@ -1,7 +1,7 @@
 import React from 'react'
 import { withNavigation } from 'react-navigation'
 import CameraContainer from '../../containers/Camera'
-import CameraPhotoEditComponent from '../../components/Camera/PhotoEdit'
+import CameraPhotoEditComponent from '../../components/CameraPhotoEdit'
 
 class CameraPhotoEditScreen extends React.Component {
   retakeClickHandler () {

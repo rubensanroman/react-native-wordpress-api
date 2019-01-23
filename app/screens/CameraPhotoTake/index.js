@@ -3,7 +3,7 @@ import { Text } from 'react-native'
 import { withNavigation } from 'react-navigation'
 import CameraService from '../../services/Camera'
 import CameraContainer from '../../containers/Camera'
-import CameraPhotoTakeComponent from '../../components/Camera/PhotoTake'
+import CameraPhotoTakeComponent from '../../components/CameraPhotoTake'
 
 class CameraPhotoTakeScreen extends React.Component {
   constructor (props) {
