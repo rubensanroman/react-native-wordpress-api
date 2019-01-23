@@ -2,7 +2,7 @@ import React from 'react'
 import { AsyncStorage, Image, Text, TextInput, TouchableHighlight, View } from 'react-native'
 import { withNavigation } from 'react-navigation'
 import Styles from './styles'
-import ContainerComponent from '../../components/Container'
+import AppContainer from '../../containers/App'
 import ApiAuthService from '../../services/ApiAuth'
 
 class LoginScreen extends React.Component {
@@ -44,7 +44,7 @@ class LoginScreen extends React.Component {
 
   render () {
     return (
-      <ContainerComponent>
+      <AppContainer>
         <View style={Styles.loginBox}>
           <Image
             source={require('./image-wordpress-logo.png')}
@@ -79,7 +79,7 @@ class LoginScreen extends React.Component {
             )}
           </TouchableHighlight>
         </View>
-      </ContainerComponent>
+      </AppContainer>
     )
   }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, FlatList, Text, View } from 'react-native'
 import { withNavigation } from 'react-navigation'
 import PostService from '../../services/Post'
-import ContainerComponent from '../../components/Container'
+import AppContainer from '../../containers/App'
 import PreloaderComponent from '../../components/Preloader'
 import PostListItemComponent from '../../components/PostListItem'
 import AddItemButtonComponent from '../../components/AddItemButton'
@@ -42,8 +42,8 @@ class HomeScreen extends React.Component {
   }
 
   render () {
-    return (this.state.isLoading) ? ( <ContainerComponent children={ <PreloaderComponent /> } /> ) : (
-      <ContainerComponent>
+    return (this.state.isLoading) ? ( <AppContainer children={ <PreloaderComponent /> } /> ) : (
+      <AppContainer>
         {
           <FlatList
             data={ this.state.data }
@@ -52,7 +52,7 @@ class HomeScreen extends React.Component {
             />
         }
         <AddItemButtonComponent onPressHandlerFunc={this.addItem} />
-      </ContainerComponent>
+      </AppContainer>
     )
   }
 }
