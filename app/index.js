@@ -1,8 +1,8 @@
 import React from 'react'
 import { createAppContainer, createBottomTabNavigator } from 'react-navigation'
-import NavigatorConfig from './config/Navigator'
+import ScreensConfig from './config/Screens'
 import ApiAuthService from './services/ApiAuth'
 
-const Navigator = createBottomTabNavigator(NavigatorConfig)
+const Navigator = createBottomTabNavigator(ScreensConfig)
 
 export default createAppContainer(Navigator)
