@@ -1,15 +1,18 @@
 import React from 'react'
-import { StatusBar, Text, View } from 'react-native'
+import { StatusBar, View } from 'react-native'
 import Styles from './styles'
 
-const CameraContainer = ({ children }) => (
+const CameraContainer = ({ children, StepsComponent, ActionsComponent }) => (
   <View style={Styles.container}>
     <StatusBar hidden />
     <View style={Styles.header}>
-      <Text>Camera Header</Text>
+      <stepsComponent />
     </View>
     <View style={Styles.main}>
       {children}
+    </View>
+    <View style={Styles.footer}>
+      <actionsComponent />
     </View>
   </View>
 )
