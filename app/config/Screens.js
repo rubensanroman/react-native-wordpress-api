@@ -5,18 +5,6 @@ import CameraPhotoTakeScreen from '../screens/CameraPhotoTake'
 import CameraPhotoEditScreen from '../screens/CameraPhotoEdit'
 
 module.exports = {
-  CAMERA_PHOTO_TAKE: {
-    screen: CameraPhotoTakeScreen,
-    navigationOptions: {
-      tabBarVisible: false
-    }
-  },
-  CAMERA_PHOTO_EDIT: {
-    screen: CameraPhotoEditScreen,
-    navigationOptions: {
-      tabBarVisible: false
-    }
-  },
   LOGIN: {
     screen: LoginScreen,
     navigationOptions: {
@@ -25,6 +13,18 @@ module.exports = {
   },
   HOME: {
     screen: HomeScreen,
+    navigationOptions: {
+      tabBarVisible: false
+    }
+  },
+  CAMERA_PHOTO_TAKE: {
+    screen: CameraPhotoTakeScreen,
+    navigationOptions: {
+      tabBarVisible: false
+    }
+  },
+  CAMERA_PHOTO_EDIT: {
+    screen: CameraPhotoEditScreen,
     navigationOptions: {
       tabBarVisible: false
     }
