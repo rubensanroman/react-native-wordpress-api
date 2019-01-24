@@ -1,80 +1,52 @@
 import { StyleSheet } from 'react-native'
 
-const footerHeight = 80
-
 export default StyleSheet.create({
-  container: {
-    bottom: 0,
-    position: 'absolute',
-    top: 0,
-    width: '100%'
-  },
-
-  main: {
-    bottom: footerHeight,
-    position: 'absolute',
-    top: 0,
-    width: '100%'
-  },
-
-  camera: {
-    height: '100%',
-    width: '100%'
-  },
-
   image: {
     height: '100%',
-    width: '100%',
-  },
-
-  footer: {
-    flex: 1,
-    alignContent: 'center',
-    alignItems: 'center',
-    bottom: 0,
-    height: footerHeight,
-    justifyContent: 'center',
-    position: 'absolute',
     width: '100%'
   },
 
-  takePhotoButton: {
-    height: 50,
-    width: 50
-  },
-
-  takePhotoIcon: {
-    color: 'white',
-    fontSize: 60,
-    left: 0,
-    marginTop: -5,
+  buttonsContainer: {
+    alignItems: 'center',
+    bottom: 0,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
     position: 'absolute',
-    top: 0
+    top: 0,
+    width: '100%'
   },
 
   button: {
-    alignSelf: 'center',
-    backgroundColor: '#f00',
-    color: '#f00',
+    alignItems: 'center',
+    flex: 1,
+    flexDirection: 'row',
+    height: 60,
     justifyContent: 'center',
-    width: 'auto'
-  },
-
-  buttonRetake: {
-    alignSelf: 'flex-start'
-  },
-
-  buttonContinue: {
-    borderWidth: 10,
-    borderColor: 'blue',
-    alignSelf: 'flex-end'
+    width: 100
   },
 
   buttonIcon: {
-    color: 'white'
+    color: '#fff',
+    fontSize: 30,
+    marginRight: 10
   },
 
-  buttonText: {
-    color: 'white'
+  buttonLabel: {
+    color: '#fff',
+    fontSize: 15,
+    fontWeight: 'bold'
+  },
+
+  buttonRetake: {
+    backgroundColor: 'red',
+    borderBottomLeftRadius: 10,
+    marginRight: 5
+  },
+
+  buttonContinue: {
+    backgroundColor: 'green',
+    borderBottomRightRadius: 10,
+    marginLeft: 5
   }
 })
