@@ -21,7 +21,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     flexDirection: 'row',
-    height: 60,
+    height: 66,
     justifyContent: 'center',
     width: 100
   },
@@ -40,13 +40,17 @@ export default StyleSheet.create({
 
   buttonRetake: {
     backgroundColor: 'red',
-    borderBottomLeftRadius: 10,
-    marginRight: 5
+    borderBottomLeftRadius: 15,
+    borderTopLeftRadius: 0,
+    marginLeft: 0,
+    marginRight: 3
   },
 
   buttonContinue: {
     backgroundColor: 'green',
-    borderBottomRightRadius: 10,
-    marginLeft: 5
+    borderBottomRightRadius: 15,
+    borderTopRightRadius: 0,
+    marginLeft: 3,
+    marginRight: 0
   }
 })

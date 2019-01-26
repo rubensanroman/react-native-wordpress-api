@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, FlatList, Text, View } from 'react-native'
 import { withNavigation } from 'react-navigation'
-import PostService from '../../services/Post'
+import PostsService from '../../services/Posts'
 import AppContainer from '../../containers/App'
 import PreloaderComponent from '../../components/Preloader'
 import PostListItemComponent from '../../components/PostListItem'
@@ -22,7 +22,7 @@ class HomeScreen extends React.Component {
   }
 
   getAllPosts () {
-    PostService.getAll(this.dataDidLoad, this.dataDidError)
+    PostsService.getAll(this.dataDidLoad, this.dataDidError)
 
     this.setState({ isLoading: true })
   }
@@ -38,7 +38,7 @@ class HomeScreen extends React.Component {
   }
 
   addItem = () => {
-    this.props.navigation.navigate('CAMERA')
+    this.props.navigation.navigate('CAMERA_PHOTO_TAKE')
   }
 
   render () {

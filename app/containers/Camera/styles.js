@@ -2,6 +2,8 @@ import { StyleSheet } from 'react-native'
 
 const headerHeight = 100
 const footerHeight = 80
+const leftSpace = 10
+const rightSpace = 10
 
 export default StyleSheet.create({
   container: {
@@ -11,14 +13,23 @@ export default StyleSheet.create({
   },
 
   header: {
-    height: headerHeight
+    alignItems: 'center',
+    height: headerHeight,
+    left: leftSpace,
+    justifyContent: 'center',
+    position: 'absolute',
+    right: rightSpace,
+    top: 0
   },
 
   main: {
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    overflow: 'hidden',
     bottom: footerHeight,
-    left: 0,
+    left: leftSpace,
     position: 'absolute',
-    right: 0,
+    right: rightSpace,
     top: headerHeight
   },
 
@@ -26,8 +37,9 @@ export default StyleSheet.create({
     alignItems: 'center',
     bottom: 0,
     height: footerHeight,
+    left: leftSpace,
     justifyContent: 'center',
     position: 'absolute',
-    width: '100%'
+    right: rightSpace
   }
 })

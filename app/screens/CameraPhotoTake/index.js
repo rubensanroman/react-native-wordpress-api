@@ -2,44 +2,53 @@ import React from 'react'
 import { Text } from 'react-native'
 import { withNavigation } from 'react-navigation'
 import CameraService from '../../services/Camera'
+import PermissionsService from '../../services/Permissions'
 import CameraContainer from '../../containers/Camera'
 import CameraPhotoTakeComponent from '../../components/CameraPhotoTake'
+import CameraPhotoTakeActionButtonsComponent from '../../components/CameraPhotoTake/ActionButtons'
+import CameraPhotoStepsComponent from '../../components/CameraPhotoSteps'
 
 class CameraPhotoTakeScreen extends React.Component {
   constructor (props) {
     super(props)
 
-    this.state = {}
+    this.state = {
+      cameraHasPermission: false,
+      isLoading: false
+    }
   }
 
-  componentDidMount () {
-    CameraService.initialize(this)
+  async componentDidMount () {
+    await PermissionsService.askOne('camera')
+
+    this.setState({ cameraHasPermission: true })
   }
 
-  async takePhoto () {
-    let photo = await CameraService.takePhoto(this)
+  async handleOnPressPhotoTake () {
+    this.setState({ isLoading: true })
 
+    let photo = await CameraService.photoTakeOne(this)
     this.props.navigation.navigate('CAMERA_PHOTO_EDIT', { photo })
-  }
 
-  refresh () {
-    console.log('volvió!')
+    this.setState({ isLoading: false })
   }
 
   render () {
-    if (CameraService.hasPermission(this)) {
-      return (
-        <CameraContainer>
+    return (
+      <CameraContainer
+        headerComponent={<CameraPhotoStepsComponent active={0} />}
+        footerComponent={<CameraPhotoTakeActionButtonsComponent onPressPhotoTakeHandler={this.handleOnPressPhotoTake.bind(this)} />}
+      >
+        { this.state.cameraHasPermission ? (
           <CameraPhotoTakeComponent
             screen={this}
             type='front'
-            takePhotoFunc={this.takePhoto.bind(this)}
           />
-        </CameraContainer>
-      )
-    } else {
-      return <Text>No has dado permiso para usar la cámara</Text>
-    }
+        ) : (
+          <Text>No has dado permiso para usar la cámara</Text>
+        )}
+      </CameraContainer>
+    )
   }
 }
 
