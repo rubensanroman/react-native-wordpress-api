@@ -3,7 +3,7 @@ import { AsyncStorage, Image, Text, TextInput, TouchableHighlight, View } from '
 import { withNavigation } from 'react-navigation'
 import Styles from './styles'
 import AppContainer from '../../containers/App'
-import ApiAuthService from '../../services/ApiAuth'
+import AuthService from '../../services/Auth'
 
 class LoginScreen extends React.Component {
   constructor (props) {
@@ -25,7 +25,7 @@ class LoginScreen extends React.Component {
 
     this.setState({ isLoading: true })
 
-    ApiAuthService.getAuthToken(wpCredentials, this.tokenDidSave, this.tokenDidError)
+    AuthService.getToken(wpCredentials, this.tokenDidSave, this.tokenDidError)
   }
 
   tokenDidSave = (response) => {
